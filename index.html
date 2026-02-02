@@ -31,9 +31,7 @@
       margin: 0;
     }
 
-    header span {
-      color: var(--amarelo);
-    }
+    header span { color: var(--amarelo); }
 
     header p {
       margin-top: 15px;
@@ -65,15 +63,11 @@
       padding: 30px;
     }
 
-    .sobre h2 {
+    .sobre h2, .servicos h2, .formulario h2 {
       color: var(--azul);
     }
 
-    .servicos h2 {
-      text-align: center;
-      color: var(--azul);
-      margin-bottom: 40px;
-    }
+    .servicos h2 { text-align: center; margin-bottom: 40px; }
 
     .cards {
       display: grid;
@@ -87,42 +81,38 @@
       padding: 25px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       border-top: 6px solid var(--amarelo);
-      transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
+    .card h3 { color: var(--azul); margin-top: 0; }
+
+    .formulario {
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
-      color: var(--azul);
-      margin-top: 0;
+    .formulario form {
+      display: grid;
+      gap: 15px;
     }
 
-    .cta {
-      background: linear-gradient(120deg, var(--amarelo), #ffd84d);
-      text-align: center;
-      padding: 50px 20px;
+    .formulario input, .formulario textarea, .formulario select {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
     }
 
-    .cta h2 {
-      color: #000;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-    }
-
-    .cta a {
+    .formulario button {
       background-color: var(--azul);
       color: white;
-      padding: 18px 35px;
-      border-radius: 50px;
-      font-size: 1.2em;
-      text-decoration: none;
+      border: none;
+      padding: 15px;
+      border-radius: 30px;
+      font-size: 1.1em;
       font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
@@ -132,61 +122,101 @@
       padding: 20px;
       font-size: 0.9em;
     }
+
+    /* BOTÃO FLUTUANTE WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>HL-<span>Eléctro</span></h1>
-    <p>Electricista Profissional • Segurança • Qualidade • Confiança</p>
-    <a class="btn-whatsapp" href="https://wa.me/244947417223" target="_blank">📱 Falar no WhatsApp</a>
-  </header>
+<header>
+  <h1>HL-<span>Eléctro</span></h1>
+  <p>Electricista Profissional • Segurança • Qualidade • Confiança</p>
+  <a class="btn-whatsapp" href="https://wa.me/244947417223" target="_blank">📱 Falar no WhatsApp</a>
+</header>
 
-  <section class="sobre">
-    <h2>Quem Somos</h2>
-    <p>
-      A <strong>HL-Eléctro</strong> oferece serviços profissionais de electricidade residencial e comercial.
-      Trabalhamos com rapidez, segurança e compromisso. O nosso site permite contacto directo entre o cliente
-      e o electricista, facilitando o atendimento e o orçamento.
-    </p>
-  </section>
+<section class="sobre">
+  <h2>Quem Somos</h2>
+  <p>
+    A <strong>HL-Eléctro</strong> oferece serviços profissionais de electricidade residencial e comercial.
+    Facilitamos o contacto directo entre o cliente e o electricista para um atendimento rápido e eficiente.
+  </p>
+</section>
 
-  <section class="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Instalações Eléctricas</h3>
-        <p>Instalação completa de tomadas, interruptores, cabos e quadros eléctricos.</p>
-      </div>
-      <div class="card">
-        <h3>Manutenção e Reparos</h3>
-        <p>Correção de falhas, curtos-circuitos e manutenção preventiva.</p>
-      </div>
-      <div class="card">
-        <h3>Iluminação LED</h3>
-        <p>Montagem de iluminação interna, externa e decorativa.</p>
-      </div>
-      <div class="card">
-        <h3>Quadros e Disjuntores</h3>
-        <p>Montagem, organização e proteção do sistema eléctrico.</p>
-      </div>
-      <div class="card">
-        <h3>Residencial & Comercial</h3>
-        <p>Atendimento para casas, lojas, escritórios e empresas.</p>
-      </div>
-    </div>
-  </section>
+<section class="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="cards">
+    <div class="card"><h3>Instalações Eléctricas</h3><p>Tomadas, interruptores, cabos e instalações completas.</p></div>
+    <div class="card"><h3>Manutenção e Reparos</h3><p>Correção de falhas e curtos-circuitos.</p></div>
+    <div class="card"><h3>Iluminação LED</h3><p>Iluminação interna, externa e decorativa.</p></div>
+    <div class="card"><h3>Quadros e Disjuntores</h3><p>Montagem e organização do sistema eléctrico.</p></div>
+    <div class="card"><h3>Residencial & Comercial</h3><p>Casas, lojas, escritórios e empresas.</p></div>
+  </div>
+</section>
 
-  <section class="cta">
-    <h2>Precisa de um Electricista?</h2>
-    <p>Entre em contacto agora mesmo e solicite o seu serviço.</p>
-    <a href="https://wa.me/244947417223" target="_blank">📲 WhatsApp: 947 417 223</a>
-  </section>
+<section class="formulario">
+  <h2>Pedido de Serviço</h2>
+  <p>Preencha o formulário e envie o pedido directamente pelo WhatsApp.</p>
+  <form onsubmit="enviarWhatsApp(event)">
+    <input type="text" id="nome" placeholder="Seu nome" required />
+    <input type="text" id="local" placeholder="Localização" required />
+    <select id="servico" required>
+      <option value="">Tipo de serviço</option>
+      <option>Instalação eléctrica</option>
+      <option>Reparo / Manutenção</option>
+      <option>Iluminação</option>
+      <option>Quadros e disjuntores</option>
+    </select>
 
-  <footer>
-    © 2026 HL-Eléctro | Electricista Profissional
-  </footer>
+    <select id="urgencia" required>
+      <option value="">Urgência do serviço</option>
+      <option>Urgente</option>
+      <option>Normal</option>
+    </select>
+
+    <input type="date" id="data" required />
+    <textarea id="mensagem" rows="4" placeholder="Descreva o problema" required></textarea>
+    <button type="submit">Enviar Pedido</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 HL-Eléctro | Electricista Profissional
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/244947417223" target="_blank">💬</a>
+
+<script>
+  function enviarWhatsApp(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const local = document.getElementById('local').value;
+    const servico = document.getElementById('servico').value;
+    const urgencia = document.getElementById('urgencia').value;
+    const data = document.getElementById('data').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const texto = `🤖 *Pedido Automático HL-Eléctro*%0A%0A👤 Nome: ${nome}%0A📍 Local: ${local}%0A🔧 Serviço: ${servico}%0A⏰ Urgência: ${urgencia}%0A📅 Data desejada: ${data}%0A📝 Descrição: ${mensagem}%0A%0A_Enviado pelo site_`;
+    window.open(`https://wa.me/244947417223?text=${texto}`, '_blank');
+  }
+</script>
 
 </body>
-                          </html>
-  
+  </html>
+                        
